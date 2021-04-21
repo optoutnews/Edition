@@ -45,7 +45,8 @@
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "lint": "gulp lint",
-        "zip": "gulp zip"
+        "zip": "gulp zip",
+        "zap": "zip -r ~/Desktop/Edition.zip . -x ./ghost/* ./.git/*"
     },
     "devDependencies": {
         "autoprefixer": "10.2.5",
