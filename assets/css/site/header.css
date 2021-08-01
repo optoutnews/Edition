@@ -8,7 +8,7 @@
 }
 
 .with-alt-header .site-header {
-    background-color: var(--brand-color);
+    background-color: #000;
 }
 
 .header-inner {
