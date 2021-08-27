@@ -1,4 +1,4 @@
-name: Deploy Theme
+name: Deploy Theme (DEV)
 on:
   push:
     branches:
