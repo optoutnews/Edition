@@ -242,7 +242,7 @@
         z-index: 90;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        background-color: var(--brand-color);
+        background-color: #000;
     }
 
     .menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
