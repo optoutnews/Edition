@@ -173,7 +173,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(300px + 30vw + 20vh);
+    height: calc(275px + 30vw);
+    max-height: 700px;
     padding-bottom: 4rem;
 }
 
@@ -215,7 +216,7 @@ h2 {
 
 .slider {
     display: flex;
-    min-height: 75%;
+    min-height: 80%;
     width: 100%;
     overflow: hidden;
 }
@@ -464,7 +465,7 @@ h2 {
 /* Slider dimensions on various screen sizes */
 @media screen and (max-width: 300px) {
     .slider {
-        min-height: 65%;
+        min-height: 72.5%;
     }
 
     .slide a {
@@ -472,7 +473,13 @@ h2 {
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 799px) {
+@media screen and (min-width: 500px) and (max-width: 649px) {
+    .slider {
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 799px) {
     .slider {
         max-width: 65%;
     }
@@ -486,7 +493,7 @@ h2 {
 
 @media screen and (min-width: 1000px) and (max-width: 1399px) {
     .slider {
-        max-width: 65%;
+        max-width: 50%;
     }
 }
 
@@ -495,7 +502,6 @@ h2 {
         max-width: 50%;
     }
 }
-
 /* Font sizes for slides on small screens/mobile */
 @media screen and (max-width: 400px) {
     .content-info-container h3 {
