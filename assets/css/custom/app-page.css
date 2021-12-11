@@ -1,0 +1,569 @@
+/*import Aileron font*/
+@import url("https://use.typekit.net/eho8zak.css");
+
+.app-page-container,
+.title,
+.subtitle,
+.featured-content h2,
+.optout-experience h2,
+.participating-outlets h2,
+.full-list-participants h2,
+.want-to-participate h2,
+.content-info-container h3,
+.content-info-container h4,
+.content-info-container h5 {
+    font-family: aileron, sans-serif;
+}
+
+.with-alt-header .site-content {
+    padding-top: 0;
+}
+
+.app-page-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+/*All section headers should be centered*/
+.main-section h2 {
+    text-align: center;
+}
+
+/*Apply gray background to alternating sections*/
+.featured-content,
+.participating-outlets,
+.want-to-participate {
+    background-color: #dfe0e1;
+}
+
+.main-section {
+    padding: 2rem;
+}
+
+/* Heading */
+.heading {
+    padding-top: 3rem;
+}
+
+.call-to-action-container {
+    text-align: center;
+}
+
+.title {
+    font-size: calc(3.5rem + 2vw);
+}
+
+.subtitle {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+.phone-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+}
+
+.phone {
+    width: 70%;
+    min-width: 50%;
+}
+
+.call-to-action {
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.call-to-action .subtitle {
+    margin: 1rem 0;
+}
+
+.sign-up-button {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up-button a:link {
+    color: #fff;
+}
+
+.sign-up-button a:hover {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.sign-up-button a {
+    border-radius: 8px;
+    background-color: #3f77d1;
+    display: flex;
+    width: 20rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.about-link {
+    color: #3f77d1;
+}
+
+.about-link:hover {
+    color: var(--red-color);
+}
+
+.beta-sign-up {
+    background-color: #4279ce;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.beta-sign-up .subtitle {
+    text-align: center;
+    color: #fff;
+}
+
+.beta-sign-up .subtitle:last-of-type {
+    margin-bottom: 0;
+}
+
+.beta-link {
+    color: #ed4339;
+}
+
+.beta-link:hover {
+    color: #000;
+    opacity: 0.75;
+}
+
+/*Featured Content*/
+.errorMsgWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-img {
+    height: 100px;
+}
+
+.message {
+    color: #3f77d1;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.featured-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(300px + 50vw);
+    max-height: 700px;
+    padding: 4rem 0;
+}
+
+/*Spinner code modified and adapted from: https://codeburst.io/how-to-create-a-simple-css-loading-spinner-make-it-accessible-e5c83c2e464c*/
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.spinner::before {
+    animation: 2s linear infinite spinner;
+    border: solid 5px #a7a7a7;
+    border-bottom-color: #ed4339;
+    border-radius: 50%;
+    content: "";
+    height: 50px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 50px;
+    will-change: transform;
+}
+
+.slider {
+    display: flex;
+    min-height: 80%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.jump-link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.5rem 0 2.5rem 0;
+    max-height: 15%;
+}
+
+.jump-link {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 2rem 2rem 2rem;
+    background-color: #3f77d1;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.active-link {
+    color: #000;
+}
+
+.jump-link:hover {
+    color: #000;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 100%;
+    padding: 2rem 0.5rem;
+    transform: translateX(0px);
+    transition: transform 0.3s ease-in-out;
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.grabbing .content-info-container {
+    transform: scale(0.99);
+}
+
+.content-info-container {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    background-position: 0% 50%;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+    user-select: none;
+    overflow-y: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-info-container h3 {
+    width: 100%;
+    font-size: 2.7rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.content-info-container h3,
+.content-info-container h4,
+.content-info-container h5 {
+    position: relative;
+    z-index: 1000;
+    color: #fff;
+    font-weight: 900;
+}
+
+.slide a {
+    color: #3f77d1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.slide a:hover {
+    color: var(--red-color);
+    opacity: 1;
+}
+
+.optout-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.optout-experience h2 {
+    align-self: flex-start;
+    width: 100%;
+}
+
+.image-wrapper-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.experience-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.experience-image-wrapper .subtitle {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.experience-image {
+    width: 50%;
+}
+
+.experience-description {
+    text-align: center;
+    max-width: 65ch;
+}
+
+.participating-outlets .subtitle {
+    font-size: 2.25rem;
+}
+
+.content-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.outlet-wrapper {
+    margin: 2rem 0 5rem 0;
+    width: 23%;
+}
+
+.outlet-wrapper a:hover img {
+    opacity: 0.75;
+}
+
+.outlet-image {
+    width: 100%;
+}
+
+.outlet-wrapper .image-caption {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0.5rem 0 0 0;
+    color: #19130b;
+}
+
+.full-list-participants {
+    padding-bottom: 2rem;
+}
+
+.want-to-participate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.want-to-participate a {
+    color: var(--red-color);
+}
+
+.want-to-participate p {
+    font-size: 1.75rem;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Media queries */
+/* Don't let phone image take up entire container on smaller screens */
+@media screen and (max-width: 1200px) {
+    .phone {
+        width: 75%;
+    }
+}
+
+/*Heading layout for larger screens*/
+@media screen and (min-width: 765px) {
+    .heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .phone-image {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .call-to-action-container {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .title {
+        margin-bottom: 5rem;
+    }
+
+    .call-to-action-container .subtitle {
+        font-size: 3rem;
+    }
+}
+
+/* Slider dimensions on various screen sizes */
+@media screen and (max-width: 300px) {
+    .slider {
+        min-height: 72.5%;
+    }
+
+    .slide a {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 649px) {
+    .slider {
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 799px) {
+    .slider {
+        max-width: 65%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px) {
+    .slider {
+        max-width: 55%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+    .slider {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .slider {
+        max-width: 50%;
+    }
+}
+/* Font sizes for slides on small screens/mobile */
+@media screen and (max-width: 400px) {
+    .content-info-container h3 {
+        font-size: 1.7rem;
+    }
+
+    .content-info-container h4 {
+        font-size: 1.5rem;
+    }
+
+    .content-info-container h5 {
+        font-size: 1rem;
+    }
+
+    .slide a {
+        font-size: 1.5rem;
+    }
+}
+
+/* On smaller screens, Optout Experience wrapers & outlet logos take up full width of container */
+@media screen and (max-width: 750px) {
+    .experience-image-wrapper {
+        width: 100%;
+    }
+
+    .outlet-wrapper {
+        width: 100%;
+    }
+}
+
+/* Limit size of embed container to 50% on larger screens */
+@media screen and (min-width: 800px) {
+    .full-list-participants {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .embed-container {
+        width: 50%;
+    }
+}
+
+/* Keep text to a smaller width for this section, to increase the height */
+@media screen and (min-width: 500px) {
+    .want-to-participate {
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+}
+
+/* Add padding for main sections on larger screens */
+@media screen and (min-width: 1000px) {
+    .optout-experience,
+    .participating-outlets {
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    .want-to-participate {
+        padding-right: 35%;
+        padding-left: 35%;
+    }
+}

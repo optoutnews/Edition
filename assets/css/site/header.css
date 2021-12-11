@@ -1,5 +1,6 @@
 .site-header {
     padding: 0 min(4rem, 5vw);
+    background-color: #000;
 }
 
 .with-full-cover .site-header {
@@ -64,6 +65,7 @@
 
 .site-header .menu-item {
     font-weight: 700;
+    color: #fff;
 }
 
 .site-header .menu-item + .menu-item {
@@ -245,9 +247,9 @@
         background-color: #000;
     }
 
-    .menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
+    /*.menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
         background-color: var(--white-color);
-    }
+    }*/
 
     .menu-opened #site-header .header-inner {
         grid-template-rows: auto 1fr auto;

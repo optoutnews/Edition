@@ -23,7 +23,7 @@
     left: 7px;
     width: 16px;
     height: 2px;
-    background-color: var(--darker-gray-color);
+    background-color: #fff;
     transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
 }
 
