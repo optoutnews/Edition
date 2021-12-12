@@ -226,15 +226,14 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1.5rem 0 2.5rem 0;
-    max-height: 15%;
+    margin: 0;
 }
 
 .jump-link {
     display: flex;
     width: 4rem;
     height: 4rem;
-    margin: 0 2rem 2rem 2rem;
+    margin: 1rem;
     background-color: #3f77d1;
     text-decoration: none;
     align-items: center;
