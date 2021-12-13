@@ -282,7 +282,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-size: 100%;
+    background-size: cover;
     background-position: 0% 50%;
     height: 100%;
     width: 100%;
