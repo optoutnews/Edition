@@ -464,8 +464,12 @@ h2 {
 
 /* Slider dimensions on various screen sizes */
 @media screen and (max-width: 300px) {
+    .featured-content {
+        height: calc(300px + 75vw);
+    }
+
     .slider {
-        min-height: 72.5%;
+        min-height: 55%;
     }
 
     .slide a {
