@@ -500,17 +500,17 @@ h2 {
 
 @media screen and (min-width: 800px) and (max-width: 999px) {
     .slider {
-        max-width: 55%;
+        max-width: 70%;
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
     .slider {
         max-width: 60%;
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
     .slider {
         max-width: 50%;
     }
