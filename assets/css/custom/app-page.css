@@ -173,7 +173,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: calc(300px + 50vw);
     max-height: 700px;
     padding: 4rem 0;
@@ -464,16 +464,22 @@ h2 {
 
 /* Slider dimensions on various screen sizes */
 @media screen and (max-width: 300px) {
+    .slider {
+        min-height: 72.5%;
+    }
+
+    .slide a {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 500px) {
     .featured-content {
         height: calc(325px + 70vw);
     }
 
     .slider {
         min-height: 65%;
-    }
-
-    .slide a {
-        margin-bottom: 1rem;
     }
 }
 
