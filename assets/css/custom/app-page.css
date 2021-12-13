@@ -176,7 +176,6 @@ h2 {
     justify-content: flex-start;
     height: calc(300px + 50vw);
     max-height: 700px;
-    padding: 4rem 0;
 }
 
 /*Spinner code modified and adapted from: https://codeburst.io/how-to-create-a-simple-css-loading-spinner-make-it-accessible-e5c83c2e464c*/
