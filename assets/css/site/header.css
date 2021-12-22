@@ -1,6 +1,6 @@
 .site-header {
     padding: 0 min(4rem, 5vw);
-    background-color: #000;
+    /* background-color: #000; */
 }
 
 .with-full-cover .site-header {
