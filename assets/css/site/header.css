@@ -247,10 +247,6 @@
         background-color: #000;
     }
 
-    /*.menu-opened:not(.with-full-cover):not(.with-alt-header) #site-header {
-        background-color: var(--white-color);
-    }*/
-
     .menu-opened #site-header .header-inner {
         grid-template-rows: auto 1fr auto;
     }
