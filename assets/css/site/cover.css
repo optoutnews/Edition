@@ -18,6 +18,7 @@
     bottom: 0;
     left: 0;
     z-index: 10;
+    /* background-color: #000; */
     opacity: 0.3;
     transition: opacity 1.5s ease;
 }

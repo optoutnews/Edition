@@ -8,6 +8,10 @@
     z-index: 90;
 }
 
+/* .with-alt-header .site-header {
+    background-color: #000;
+} */
+
 .header-inner {
     display: grid;
     height: var(--navbar-height);
