@@ -54,5 +54,5 @@
 }
 
 .header-actions button {
-    color: green;
+    display: none;
 }
