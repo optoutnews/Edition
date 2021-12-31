@@ -13,4 +13,5 @@
 
 .container.small {
     max-width: calc(720px + 10vw);
+    margin-top: 4rem;
 }
