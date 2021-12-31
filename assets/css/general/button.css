@@ -54,5 +54,5 @@
 }
 
 .button-text .menu-item .members-login {
-    display: none;
+    border: 2px solid red;
 }
