@@ -52,3 +52,7 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+.button-text .menu-item .members-login {
+    display: none;
+}
