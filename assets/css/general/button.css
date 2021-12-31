@@ -53,6 +53,6 @@
     cursor: pointer;
 }
 
-.button-text .menu-item .members-login {
-    border: 2px solid red;
+.social button {
+    color: green;
 }
