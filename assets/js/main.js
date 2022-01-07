@@ -515,6 +515,7 @@ function pswp(container, element, trigger, caption, isGallery) {
 
         dataFetched = true;
         partners = fetchDataArrays[0];
+        console.log(partners);
 
         populateSlider(allContent);
         spinner.style.display = 'none';
