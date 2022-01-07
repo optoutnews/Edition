@@ -502,7 +502,7 @@ function pswp(container, element, trigger, caption, isGallery) {
             'podcasts',
             'videos',
         ].map(async (endpointName) => {
-            const uri = `https://api.optout.news/api/${endpointName}.jsn`;
+            const uri = `https://api.optout.news/api/${endpointName}.json`;
             const data = await fetch(uri).then((result) => result.json());
             return data;
         });
@@ -515,6 +515,7 @@ function pswp(container, element, trigger, caption, isGallery) {
 
         dataFetched = true;
         partners = fetchDataArrays[0];
+        console.log(partners);
 
         populateSlider(allContent);
         spinner.style.display = 'none';
