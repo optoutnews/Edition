@@ -515,7 +515,6 @@ function pswp(container, element, trigger, caption, isGallery) {
 
         dataFetched = true;
         partners = fetchDataArrays[0];
-        console.log(partners);
 
         populateSlider(allContent);
         spinner.style.display = 'none';
@@ -530,6 +529,7 @@ function pswp(container, element, trigger, caption, isGallery) {
     //Inject data
 
     function populateSlider(data) {
+        console.log(partners);
         data.sort((a, b) => {
             if (a.published_at > b.published_at) {
                 return -1;
