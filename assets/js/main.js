@@ -515,7 +515,6 @@ function pswp(container, element, trigger, caption, isGallery) {
 
         dataFetched = true;
         partners = fetchDataArrays[0];
-        console.log(partners);
 
         populateSlider(allContent);
         spinner.style.display = 'none';
@@ -603,7 +602,20 @@ function pswp(container, element, trigger, caption, isGallery) {
         const partner = partners.filter((partner) => {
             return partner.id === id;
         });
+
+        console.log(
+            removeWhiteSpaceFromImageUrl(
+                'https://s3.amazonaws.com/fansfm_production/be4a52cd-e026-4cc3-a5e2-216f22f9613a/Nomiki avatar purple.jpg'
+            )
+        );
+
         return partner[0].image_url;
+    }
+
+    function removeWhiteSpaceFromImageUrl(url) {
+        const trimmedUrl = url.split(' ').join('');
+
+        return trimmedUrl;
     }
 
     //Guard against errors if data not fetched
