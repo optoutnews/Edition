@@ -602,7 +602,15 @@ function pswp(container, element, trigger, caption, isGallery) {
         const partner = partners.filter((partner) => {
             return partner.id === id;
         });
-        return partner[0].image_url;
+
+        return removeWhiteSpaceFromImageUrl(partner[0].image_url);
+    }
+
+    function removeWhiteSpaceFromImageUrl(url) {
+        const regex = new RegExp(/ /g);
+        const trimmedUrl = url.replace(regex, '+');
+
+        return trimmedUrl;
     }
 
     //Guard against errors if data not fetched

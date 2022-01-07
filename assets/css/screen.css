@@ -9,7 +9,6 @@
 @import "site/cover.css";
 @import "site/footer.css";
 @import "site/burger.css";
-@import "site/portal.css";
 @import "blog/feed.css";
 @import "blog/featured.css";
 @import "blog/pagination.css";
@@ -23,6 +22,7 @@
 @import "vendor/tiny-slider.css";
 @import "vendor/pswp.css";
 @import "misc/kg.css";
+@import "misc/portal.css";
 @import "misc/utils.css";
 @import "misc/animations.css";
 @import "custom/app-page.css";
