@@ -603,13 +603,7 @@ function pswp(container, element, trigger, caption, isGallery) {
             return partner.id === id;
         });
 
-        console.log(
-            removeWhiteSpaceFromImageUrl(
-                'https://s3.amazonaws.com/fansfm_production/be4a52cd-e026-4cc3-a5e2-216f22f9613a/Nomiki avatar purple.jpg'
-            )
-        );
-
-        return partner[0].image_url;
+        return removeWhiteSpaceFromImageUrl(partner[0].image_url);
     }
 
     function removeWhiteSpaceFromImageUrl(url) {
