@@ -613,7 +613,7 @@ function pswp(container, element, trigger, caption, isGallery) {
     }
 
     function removeWhiteSpaceFromImageUrl(url) {
-        const regex = new RegExp(/ /);
+        const regex = new RegExp(/ /g);
         const trimmedUrl = url.replace(regex, '+');
 
         return trimmedUrl;
