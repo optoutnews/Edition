@@ -529,7 +529,7 @@ function pswp(container, element, trigger, caption, isGallery) {
     //Inject data
 
     function populateSlider(data) {
-        console.log(partners);
+        console.log('working');
         data.sort((a, b) => {
             if (a.published_at > b.published_at) {
                 return -1;
