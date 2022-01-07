@@ -502,7 +502,7 @@ function pswp(container, element, trigger, caption, isGallery) {
             'podcasts',
             'videos',
         ].map(async (endpointName) => {
-            const uri = `https://api.optout.news/api/${endpointName}.json`;
+            const uri = `https://api.optout.news/api/${endpointName}.jsn`;
             const data = await fetch(uri).then((result) => result.json());
             return data;
         });
@@ -529,7 +529,6 @@ function pswp(container, element, trigger, caption, isGallery) {
     //Inject data
 
     function populateSlider(data) {
-        console.log('working');
         data.sort((a, b) => {
             if (a.published_at > b.published_at) {
                 return -1;
