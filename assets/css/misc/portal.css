@@ -3,6 +3,12 @@
     opacity: 0 !important;
 }
 
+@media screen and (max-width: 415px) {
+    .menu-opened #ghost-portal-root .gh-portal-triggerbtn-iframe {
+        bottom: 115px !important;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .gh-portal-triggerbtn-iframe {
         margin-bottom: 75px;
