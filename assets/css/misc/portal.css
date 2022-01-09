@@ -6,7 +6,6 @@
 @media screen and (max-width: 400px) {
     .gh-portal-triggerbtn-iframe {
         bottom: 125px !important;
-        outline: 2px solid white;
     }
 }
 
