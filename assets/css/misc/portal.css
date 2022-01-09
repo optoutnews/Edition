@@ -4,7 +4,10 @@
 }
 
 @media screen and (max-width: 400px) {
-    .menu-opened #ghost-portal-root .gh-portal-triggerbtn-iframe {
+    .with-alt-header
+        .menu-opened
+        #ghost-portal-root
+        .gh-portal-triggerbtn-iframe {
         bottom: 125px;
         outline: 2px solid white;
     }
