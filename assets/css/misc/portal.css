@@ -3,9 +3,9 @@
     opacity: 0 !important;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
     .gh-portal-triggerbtn-iframe {
-        bottom: 125px !important;
+        bottom: 120px !important;
     }
 }
 
