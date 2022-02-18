@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - landing
-  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
