@@ -2,7 +2,7 @@ name: Deploy Theme (Landing Dev)
 on:
   push:
     branches:
-      - landing
+      - landing-dev
 jobs:
   deploy:
     runs-on: ubuntu-20.04
