@@ -54,8 +54,8 @@ function js(done) {
             src(
                 [
                     "assets/js/lib/*.js",
-                    "assets/js/home.js",
                     "assets/js/main.js",
+                    "assets/js/home.js",
                 ],
                 { sourcemaps: true }
             ),
