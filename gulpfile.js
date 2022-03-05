@@ -54,13 +54,12 @@ function js(done) {
             src(
                 [
                     "assets/js/lib/*.js",
-                    "assets/js/main.js",
                     "assets/js/home.js",
+                    "assets/js/main.js",
                 ],
                 { sourcemaps: true }
             ),
             concat("main.min.js"),
-            concat("home.min.js"),
             uglify(),
             dest("assets/built/", { sourcemaps: "." }),
             livereload(),
