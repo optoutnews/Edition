@@ -96,7 +96,7 @@
         return convdataTime;
     }
 
-    //Data fetching
+    // Data fetching
     let dataFetched = false,
         partners;
 
