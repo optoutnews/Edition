@@ -60,6 +60,7 @@ function js(done) {
                 { sourcemaps: true }
             ),
             concat("main.min.js"),
+            concat("home.min.js"),
             uglify(),
             dest("assets/built/", { sourcemaps: "." }),
             livereload(),
