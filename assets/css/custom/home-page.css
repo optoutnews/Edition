@@ -1,7 +1,7 @@
 /*import Aileron font*/
 @import url("https://use.typekit.net/eho8zak.css");
 
-.app-page-container,
+.home-page-container,
 .title,
 .subtitle,
 .featured-content h2,
@@ -19,7 +19,7 @@
     padding-top: 0;
 }
 
-.app-page-container {
+.home-page-container {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -43,7 +43,7 @@
 
 /* Heading */
 .heading {
-    padding-top: 3rem;
+    padding-top: 0;
 }
 
 .call-to-action-container {
@@ -128,6 +128,7 @@ h2 {
     padding: 2rem 1rem;
     border-radius: 5px;
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 .beta-sign-up .subtitle {
