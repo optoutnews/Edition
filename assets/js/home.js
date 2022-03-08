@@ -138,8 +138,10 @@
         const featuredDiv = document.querySelector('.featured-content');
 
         if (data) {
+            spinner.style.display = 'none';
             const noFeatured = document.createElement('h3');
             noFeatured.innerHTML = 'Currently No Featured Items'
+            featuredDiv.append(noFeatured)
         } else {
             data.sort((a, b) => {
                 if (a.published_at > b.published_at) {
