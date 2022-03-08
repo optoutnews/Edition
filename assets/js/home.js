@@ -122,8 +122,13 @@
         dataFetched = true;
         partners = fetchDataArrays[0];
 
-        populateSlider(allContent);
-        spinner.style.display = 'none';
+        if (!allContent) {
+            spinner.style.display = 'none';
+        } else {
+            populateSlider(allContent);
+            spinner.style.display = 'none';
+        }
+
     } catch (e) {
         spinner.style.display = 'none';
         document.querySelector(
@@ -138,10 +143,9 @@
         const featuredDiv = document.querySelector('.featured-content');
 
         if (data) {
-            spinner.style.display = 'none';
             const noFeatured = document.createElement('h3');
             noFeatured.innerHTML = 'Currently No Featured Items'
-            featuredDiv.append(noFeatured)
+            featuredDiv.prepend(noFeatured)
         } else {
             data.sort((a, b) => {
                 if (a.published_at > b.published_at) {
