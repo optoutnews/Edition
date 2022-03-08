@@ -135,6 +135,11 @@
     //Inject data
 
     function populateSlider(data) {
+        const featuredDiv = document.querySelector('.featured-content');
+        if (!data) {
+            const noFeatured = document.createElement('h3');
+            noFeatured.innerHTML = 'Currently No Featured Items'
+        }
         data.sort((a, b) => {
             if (a.published_at > b.published_at) {
                 return -1;
@@ -150,7 +155,6 @@
             .map((filteredItem, index) => {
                 const numberOfFeaturedItems = 5;
                 if (index <= numberOfFeaturedItems - 1) {
-                    const featuredDiv = document.querySelector('.featured-content');
                     const jumpLinkContainer = document.querySelector(
                         '.jump-link-container'
                     );
