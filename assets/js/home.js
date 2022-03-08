@@ -137,7 +137,7 @@
     function populateSlider(data) {
         const featuredDiv = document.querySelector('.featured-content');
 
-        if (!data) {
+        if (data) {
             const noFeatured = document.createElement('h3');
             noFeatured.innerHTML = 'Currently No Featured Items'
         } else {
