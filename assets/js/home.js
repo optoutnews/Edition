@@ -141,11 +141,12 @@
 
     function populateSlider(data) {
         const featuredDiv = document.querySelector('.featured-content');
+        const slider = document.querySelector('.slider');
 
         if (data) {
             const noFeatured = document.createElement('h3');
             noFeatured.innerHTML = 'Currently No Featured Items'
-            featuredDiv.prepend(noFeatured)
+            slider.append(noFeatured)
         } else {
             data.sort((a, b) => {
                 if (a.published_at > b.published_at) {
