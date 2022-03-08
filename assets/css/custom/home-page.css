@@ -225,6 +225,7 @@ h2 {
 .slider-no-featured {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .jump-link-container {
