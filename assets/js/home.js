@@ -146,6 +146,7 @@
         if (data) {
             const noFeatured = document.createElement('h3');
             noFeatured.innerHTML = 'Currently No Featured Items'
+            slider.classList.add('slider-no-featured')
             slider.append(noFeatured)
         } else {
             data.sort((a, b) => {

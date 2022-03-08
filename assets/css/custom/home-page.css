@@ -222,6 +222,11 @@ h2 {
     overflow: hidden;
 }
 
+.slider-no-featured {
+    display: flex;
+    justify-content: center;
+}
+
 .jump-link-container {
     display: flex;
     flex-wrap: wrap;
