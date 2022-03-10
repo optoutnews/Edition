@@ -122,12 +122,8 @@
         dataFetched = true;
         partners = fetchDataArrays[0];
 
-        if (!allContent) {
-            spinner.style.display = 'none';
-        } else {
-            populateSlider(allContent);
-            spinner.style.display = 'none';
-        }
+        populateSlider(allContent);
+        spinner.style.display = 'none';
 
     } catch (e) {
         spinner.style.display = 'none';
