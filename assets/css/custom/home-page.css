@@ -5,6 +5,7 @@
 .title,
 .subtitle,
 .featured-content h2,
+.featured-content h3,
 .optout-experience h2,
 .participating-outlets h2,
 .full-list-participants h2,
@@ -61,6 +62,11 @@
 h2 {
     font-size: 3rem;
     margin: 2rem 0;
+}
+
+.app-store-badge {
+    display: inline;
+    width: 15rem;
 }
 
 .phone-image {
@@ -123,7 +129,7 @@ h2 {
     color: var(--red-color);
 }
 
-.beta-sign-up {
+.app-store-download {
     background-color: #4279ce;
     padding: 2rem 1rem;
     border-radius: 5px;
@@ -131,21 +137,21 @@ h2 {
     margin-bottom: 4rem;
 }
 
-.beta-sign-up .subtitle {
+.app-store-download .subtitle {
     text-align: center;
     color: #fff;
 }
 
-.beta-sign-up .subtitle:last-of-type {
+.app-store-download .subtitle:last-of-type {
     margin-bottom: 0;
 }
 
-.beta-link {
-    color: #ed4339;
+.app-store-download-link {
+    display: block;
+    margin-top: 2.5rem;
 }
 
-.beta-link:hover {
-    color: #000;
+.app-store-download-link:hover {
     opacity: 0.75;
 }
 
@@ -220,6 +226,12 @@ h2 {
     min-height: 80%;
     width: 100%;
     overflow: hidden;
+}
+
+.slider-no-featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .jump-link-container {

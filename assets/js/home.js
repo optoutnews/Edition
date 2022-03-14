@@ -124,6 +124,7 @@
 
         populateSlider(allContent);
         spinner.style.display = 'none';
+
     } catch (e) {
         spinner.style.display = 'none';
         document.querySelector(
@@ -135,68 +136,78 @@
     //Inject data
 
     function populateSlider(data) {
-        data.sort((a, b) => {
-            if (a.published_at > b.published_at) {
-                return -1;
-            }
-            if (a.published_at < b.published_at) {
-                return 1;
-            }
-            return 0;
-        })
-            .filter((item) => {
-                return item.featured === true;
-            })
-            .map((filteredItem, index) => {
-                const numberOfFeaturedItems = 5;
-                if (index <= numberOfFeaturedItems - 1) {
-                    const featuredDiv = document.querySelector('.featured-content');
-                    const jumpLinkContainer = document.querySelector(
-                        '.jump-link-container'
-                    );
-                    const jumpLink = document.createElement('a');
-                    const slider = document.querySelector('.slider');
-                    const slide = document.createElement('div');
-                    const overlay = document.createElement('div');
-                    const contentInfoContainer = document.createElement('div');
-                    const image = document.createElement('img');
-                    const title = document.createElement('h3');
-                    const partner = document.createElement('h4');
-                    const date = document.createElement('h5');
-                    const titleText = filteredItem.title;
-                    const dateText = formatDateTime({
-                        timestamp: filteredItem.published_at,
-                    });
-                    const link = document.createElement('a');
-                    jumpLink.classList.add('jump-link');
-                    jumpLink.setAttribute('id', index);
-                    jumpLink.innerHTML = index + 1;
-                    slide.classList.add('slide');
-                    slide.id = `slide-${index}`;
-                    overlay.classList.add('overlay');
-                    contentInfoContainer.classList.add('content-info-container');
-                    contentInfoContainer.style.backgroundImage = `url(${filteredItem.image_url !== null
-                        ? filteredItem.image_url
-                        : getPartnerImage(filteredItem.partner_id)
-                        })`;
-                    image.src = filteredItem.image_url;
-                    partner.classList.add('partner');
-                    date.classList.add('date');
-                    link.href = filteredItem.url.includes('?')
-                        ? `${filteredItem.url}&utm_source=optout&utm_medium=site`
-                        : `${filteredItem.url}?utm_source=optout&utm_medium=site`;
-                    link.setAttribute('target', 'blank');
-                    title.innerHTML = titleText;
-                    partner.innerHTML = getPartner(filteredItem.partner_id);
-                    date.innerHTML = dateText;
-                    link.innerHTML = 'Go to Content';
-                    jumpLinkContainer.append(jumpLink);
-                    contentInfoContainer.append(overlay, title, partner, date);
-                    slide.append(contentInfoContainer, link);
-                    slider.append(slide);
-                    featuredDiv.append(jumpLinkContainer, slider);
+        const featuredDiv = document.querySelector('.featured-content');
+        const slider = document.querySelector('.slider');
+
+        if (!data) {
+            const noFeatured = document.createElement('h3');
+            noFeatured.innerHTML = 'Currently No Featured Items'
+            slider.classList.add('slider-no-featured')
+            slider.append(noFeatured)
+        } else {
+            data.sort((a, b) => {
+                if (a.published_at > b.published_at) {
+                    return -1;
                 }
-            });
+                if (a.published_at < b.published_at) {
+                    return 1;
+                }
+                return 0;
+            })
+                .filter((item) => {
+                    return item.featured === true;
+                })
+                .map((filteredItem, index) => {
+                    const numberOfFeaturedItems = 5;
+                    if (index <= numberOfFeaturedItems - 1) {
+                        const jumpLinkContainer = document.querySelector(
+                            '.jump-link-container'
+                        );
+                        const jumpLink = document.createElement('a');
+                        const slider = document.querySelector('.slider');
+                        const slide = document.createElement('div');
+                        const overlay = document.createElement('div');
+                        const contentInfoContainer = document.createElement('div');
+                        const image = document.createElement('img');
+                        const title = document.createElement('h3');
+                        const partner = document.createElement('h4');
+                        const date = document.createElement('h5');
+                        const titleText = filteredItem.title;
+                        const dateText = formatDateTime({
+                            timestamp: filteredItem.published_at,
+                        });
+                        const link = document.createElement('a');
+                        jumpLink.classList.add('jump-link');
+                        jumpLink.setAttribute('id', index);
+                        jumpLink.innerHTML = index + 1;
+                        slide.classList.add('slide');
+                        slide.id = `slide-${index}`;
+                        overlay.classList.add('overlay');
+                        contentInfoContainer.classList.add('content-info-container');
+                        contentInfoContainer.style.backgroundImage = `url(${filteredItem.image_url !== null
+                            ? filteredItem.image_url
+                            : getPartnerImage(filteredItem.partner_id)
+                            })`;
+                        image.src = filteredItem.image_url;
+                        partner.classList.add('partner');
+                        date.classList.add('date');
+                        link.href = filteredItem.url.includes('?')
+                            ? `${filteredItem.url}&utm_source=optout&utm_medium=site`
+                            : `${filteredItem.url}?utm_source=optout&utm_medium=site`;
+                        link.setAttribute('target', 'blank');
+                        title.innerHTML = titleText;
+                        partner.innerHTML = getPartner(filteredItem.partner_id);
+                        date.innerHTML = dateText;
+                        link.innerHTML = 'Go to Content';
+                        jumpLinkContainer.append(jumpLink);
+                        contentInfoContainer.append(overlay, title, partner, date);
+                        slide.append(contentInfoContainer, link);
+                        slider.append(slide);
+                        featuredDiv.append(jumpLinkContainer, slider);
+                    }
+                });
+
+        }
     }
 
     function getPartner(id) {
