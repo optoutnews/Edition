@@ -139,7 +139,7 @@
         const featuredDiv = document.querySelector('.featured-content');
         const slider = document.querySelector('.slider');
 
-        if (data) {
+        if (!data) {
             const noFeatured = document.createElement('h3');
             noFeatured.innerHTML = 'Currently No Featured Items'
             slider.classList.add('slider-no-featured')
