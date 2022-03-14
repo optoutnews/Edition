@@ -64,6 +64,11 @@ h2 {
     margin: 2rem 0;
 }
 
+.app-store-badge {
+    display: inline;
+    width: 15rem;
+}
+
 .phone-image {
     display: flex;
     flex-direction: column;
@@ -124,7 +129,7 @@ h2 {
     color: var(--red-color);
 }
 
-.beta-sign-up {
+.app-store-download {
     background-color: #4279ce;
     padding: 2rem 1rem;
     border-radius: 5px;
@@ -132,20 +137,21 @@ h2 {
     margin-bottom: 4rem;
 }
 
-.beta-sign-up .subtitle {
+.app-store-download .subtitle {
     text-align: center;
     color: #fff;
 }
 
-.beta-sign-up .subtitle:last-of-type {
+.app-store-download .subtitle:last-of-type {
     margin-bottom: 0;
 }
 
-.beta-link {
-    color: #ed4339;
+.app-store-download-link {
+    display: block;
+    margin-top: 2rem;
 }
 
-.beta-link:hover {
+.app-store-download-link:hover {
     color: #000;
     opacity: 0.75;
 }
