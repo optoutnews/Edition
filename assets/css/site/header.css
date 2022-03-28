@@ -85,6 +85,7 @@
 .menu-item-more {
     position: relative;
     margin-left: 2rem;
+    color: #fff;
 }
 
 .with-full-cover:not(.menu-opened) .menu-item-more,
