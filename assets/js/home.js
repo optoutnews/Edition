@@ -126,6 +126,7 @@
         spinner.style.display = 'none';
 
     } catch (e) {
+        console.log(e)
         spinner.style.display = 'none';
         document.querySelector(
             '.slider'
@@ -227,7 +228,7 @@
 
     function removeWhiteSpaceFromImageUrl(url) {
         const regex = new RegExp(/ /g);
-        const trimmedUrl = url.replace(regex, '+');
+        const trimmedUrl = url ? url.replace(regex, '+') : url;
 
         return trimmedUrl;
     }
