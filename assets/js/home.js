@@ -223,12 +223,12 @@
             return partner.id === id;
         });
 
-        return partner[0].image_url;
+        return removeWhiteSpaceFromImageUrl(partner[0].image_url);
     }
 
     function removeWhiteSpaceFromImageUrl(url) {
         const regex = new RegExp(/ /g);
-        const trimmedUrl = url.replace(regex, '+');
+        const trimmedUrl = url ? url.replace(regex, '+') : url;
 
         return trimmedUrl;
     }
