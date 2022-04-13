@@ -223,7 +223,7 @@
             return partner.id === id;
         });
 
-        return removeWhiteSpaceFromImageUrl(partner[0].image_url);
+        return partner[0].image_url;
     }
 
     function removeWhiteSpaceFromImageUrl(url) {
