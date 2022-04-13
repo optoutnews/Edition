@@ -126,6 +126,7 @@
         spinner.style.display = 'none';
 
     } catch (e) {
+        console.log(e)
         spinner.style.display = 'none';
         document.querySelector(
             '.slider'
