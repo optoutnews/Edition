@@ -161,7 +161,7 @@ h2 {
     flex-basis: 100%;
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (max-width: 770px) {
     .press-and-calendar {
         margin-left: 0;
     }
