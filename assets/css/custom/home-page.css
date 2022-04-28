@@ -159,6 +159,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-basis: 100%;
+    margin-left: 50%;
 }
 
 @media screen and (max-width: 770px) {
