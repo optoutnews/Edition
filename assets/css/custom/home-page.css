@@ -158,6 +158,19 @@ h2 {
 .press-and-calendar {
     display: flex;
     justify-content: center;
+    flex-basis: 100%;
+}
+
+@media screen and (min-width: 770px) {
+    .press-and-calendar {
+        margin-left: 0;
+    }
+}
+
+.press-and-calendar-item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 /*Featured Content*/
