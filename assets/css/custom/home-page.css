@@ -155,24 +155,16 @@ h2 {
     opacity: 0.75;
 }
 
-/* .press-and-calendar {
+.press-and-calendar {
     display: flex;
     justify-content: center;
-    flex-basis: 100%;
-    margin-left: 50%;
-}
-
-@media screen and (max-width: 765px) {
-    .press-and-calendar {
-        margin-left: 0;
-    }
 }
 
 .press-and-calendar-item {
     width: 50%;
     display: flex;
     justify-content: center;
-} */
+}
 
 /*Featured Content*/
 .errorMsgWrapper {
