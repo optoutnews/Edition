@@ -478,7 +478,6 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        padding-bottom: 0;
     }
 
     .phone-image {
