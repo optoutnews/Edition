@@ -45,6 +45,7 @@
 /* Heading */
 .heading {
     padding-top: 0;
+    padding-bottom: 4rem;
 }
 
 .call-to-action-container {
@@ -99,11 +100,11 @@ h2 {
     justify-content: center;
 }
 
-.sign-up-button a:link {
+.sign-up-button a:link, .press-and-calendar-item a:link {
     color: #fff;
 }
 
-.sign-up-button a:hover {
+.sign-up-button a:hover, .press-and-calendar-item a:hover {
     color: #000;
     border: 1px solid #000;
 }
@@ -153,6 +154,30 @@ h2 {
 
 .app-store-download-link:hover {
     opacity: 0.75;
+}
+
+.press-and-calendar {
+    display: flex;
+    justify-content: center;
+}
+
+.press-and-calendar-item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.press-and-calendar-item a {
+    border-radius: 8px;
+    background-color: #3f77d1;
+    display: flex;
+    width: 15rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 /*Featured Content*/
@@ -471,6 +496,13 @@ h2 {
 
     .call-to-action-container .subtitle {
         font-size: 3rem;
+    }
+}
+
+/* Adjust top margin for press and calendar section on large screens */
+@media screen and (min-width: 1350px) {
+    .press-and-calendar {
+        margin-top: 3.5rem;
     }
 }
 
