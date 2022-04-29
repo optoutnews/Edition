@@ -183,11 +183,11 @@ h2 {
     background-color: #3f77d1;
     display: flex;
     width: 15rem;
-    height: 10rem;
+    height: 5rem;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
