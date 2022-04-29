@@ -105,11 +105,11 @@ h2 {
     justify-content: center;
 }
 
-.sign-up-button a:link {
+.sign-up-button a:link, .press-and-calendar-item a:link {
     color: #fff;
 }
 
-.sign-up-button a:hover {
+.sign-up-button a:hover, .press-and-calendar-item a:hover {
     color: #000;
     border: 1px solid #000;
 }
