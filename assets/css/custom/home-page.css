@@ -47,6 +47,12 @@
     padding-top: 0;
 }
 
+@media screen and (max-width: 765px) {
+    .heading {
+        padding-bottom: 4rem;
+    } 
+}
+
 .call-to-action-container {
     text-align: center;
 }
