@@ -178,6 +178,19 @@ h2 {
     justify-content: center;
 }
 
+.press-and-calendar-item a {
+    border-radius: 8px;
+    background-color: #3f77d1;
+    display: flex;
+    width: 15rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+}
+
 /*Featured Content*/
 .errorMsgWrapper {
     display: flex;
