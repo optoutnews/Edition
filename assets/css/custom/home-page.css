@@ -67,10 +67,54 @@ h2 {
     margin: 2rem 0;
 }
 
+/* App badge download section for iOS & Android */
+.app-store-download {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #4279ce;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.app-store-download .subtitle {
+    text-align: center;
+    color: #fff;
+}
+
+.subtitle .app-badge-container {
+    margin-bottom: 0;
+    width: 50%;
+}
+
+.call-to-action-download-header {
+    width: 100%;
+}
+
+.app-store-download-link {
+    display: block;
+    margin-top: 2.5rem;
+    width: 20rem;
+}
+
 .app-store-badge {
     display: inline;
-    width: 15rem;
+    width: 100%;
 }
+
+.app-store-download-link:hover {
+    opacity: 0.75;
+}
+
+small {
+    display: block;
+    width: 100%;
+    color: #fff;
+}
+
+/* Large phone image */
 
 .phone-image {
     display: flex;
@@ -102,11 +146,13 @@ h2 {
     justify-content: center;
 }
 
-.sign-up-button a:link, .press-and-calendar-item a:link {
+.sign-up-button a:link,
+.press-and-calendar-item a:link {
     color: #fff;
 }
 
-.sign-up-button a:hover, .press-and-calendar-item a:hover {
+.sign-up-button a:hover,
+.press-and-calendar-item a:hover {
     color: #000;
     border: 1px solid #000;
 }
@@ -130,32 +176,6 @@ h2 {
 
 .about-link:hover {
     color: var(--red-color);
-}
-
-.app-store-download {
-    background-color: #4279ce;
-    padding: 2rem 1rem;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 4rem;
-}
-
-.app-store-download .subtitle {
-    text-align: center;
-    color: #fff;
-}
-
-.app-store-download .subtitle:last-of-type {
-    margin-bottom: 0;
-}
-
-.app-store-download-link {
-    display: block;
-    margin-top: 2.5rem;
-}
-
-.app-store-download-link:hover {
-    opacity: 0.75;
 }
 
 .press-and-calendar {
@@ -563,6 +583,7 @@ h2 {
         max-width: 50%;
     }
 }
+
 /* Font sizes for slides on small screens/mobile */
 @media screen and (max-width: 400px) {
     .content-info-container h3 {
@@ -616,6 +637,7 @@ h2 {
 
 /* Add padding for main sections on larger screens */
 @media screen and (min-width: 1000px) {
+
     .optout-experience,
     .participating-outlets {
         padding-right: 15%;
