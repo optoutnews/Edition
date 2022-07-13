@@ -101,11 +101,6 @@ h2 {
     width: 20rem;
 }
 
-.app-store-badge {
-    display: inline;
-    width: 100%;
-}
-
 .app-store-download-link:hover {
     opacity: 0.75;
 }
