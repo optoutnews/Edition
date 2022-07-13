@@ -71,7 +71,7 @@ h2 {
 .app-store-download {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #4279ce;
     padding: 2rem 1rem;
     border-radius: 5px;
@@ -89,7 +89,6 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    width: 50%;
 }
 
 .call-to-action-download-header {
