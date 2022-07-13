@@ -107,7 +107,9 @@ h2 {
 }
 
 .ios-app-store-badge-image {
+    display: block;
     width: 82%;
+    margin: 0 auto;
 }
 
 .small {
