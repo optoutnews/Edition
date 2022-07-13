@@ -12,7 +12,8 @@
 .want-to-participate h2,
 .content-info-container h3,
 .content-info-container h4,
-.content-info-container h5 {
+.content-info-container h5,
+small {
     font-family: aileron, sans-serif;
 }
 
@@ -67,10 +68,65 @@ h2 {
     margin: 2rem 0;
 }
 
-.app-store-badge {
-    display: inline;
-    width: 15rem;
+/* App badge download section for iOS & Android */
+.app-store-download {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #4279ce;
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 4rem;
 }
+
+.app-store-download .subtitle {
+    text-align: center;
+    color: #fff;
+}
+
+.app-badge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.call-to-action-download-header {
+    width: 100%;
+}
+
+.app-store-download-link {
+    display: block;
+    margin-top: 2.5rem;
+    width: 20rem;
+}
+
+.app-store-download-link:hover {
+    opacity: 0.75;
+}
+
+.ios-app-store-badge-image {
+    display: block;
+    width: 82%;
+    margin: 0 auto;
+}
+
+.small {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+small {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Large phone image */
 
 .phone-image {
     display: flex;
@@ -102,11 +158,13 @@ h2 {
     justify-content: center;
 }
 
-.sign-up-button a:link, .press-and-calendar-item a:link {
+.sign-up-button a:link,
+.press-and-calendar-item a:link {
     color: #fff;
 }
 
-.sign-up-button a:hover, .press-and-calendar-item a:hover {
+.sign-up-button a:hover,
+.press-and-calendar-item a:hover {
     color: #000;
     border: 1px solid #000;
 }
@@ -130,32 +188,6 @@ h2 {
 
 .about-link:hover {
     color: var(--red-color);
-}
-
-.app-store-download {
-    background-color: #4279ce;
-    padding: 2rem 1rem;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 4rem;
-}
-
-.app-store-download .subtitle {
-    text-align: center;
-    color: #fff;
-}
-
-.app-store-download .subtitle:last-of-type {
-    margin-bottom: 0;
-}
-
-.app-store-download-link {
-    display: block;
-    margin-top: 2.5rem;
-}
-
-.app-store-download-link:hover {
-    opacity: 0.75;
 }
 
 .press-and-calendar {
@@ -563,6 +595,7 @@ h2 {
         max-width: 50%;
     }
 }
+
 /* Font sizes for slides on small screens/mobile */
 @media screen and (max-width: 400px) {
     .content-info-container h3 {
@@ -616,6 +649,7 @@ h2 {
 
 /* Add padding for main sections on larger screens */
 @media screen and (min-width: 1000px) {
+
     .optout-experience,
     .participating-outlets {
         padding-right: 15%;
