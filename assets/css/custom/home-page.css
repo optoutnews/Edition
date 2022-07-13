@@ -105,6 +105,12 @@ h2 {
     opacity: 0.75;
 }
 
+.small {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 small {
     display: block;
     width: 100%;
