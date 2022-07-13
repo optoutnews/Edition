@@ -12,7 +12,8 @@
 .want-to-participate h2,
 .content-info-container h3,
 .content-info-container h4,
-.content-info-container h5 {
+.content-info-container h5,
+small {
     font-family: aileron, sans-serif;
 }
 
