@@ -1,5 +1,6 @@
 //Home page custom js
 
+console.log(document.URL)
 (async function () {
     // Date formatting
 
