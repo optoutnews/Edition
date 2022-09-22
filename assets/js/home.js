@@ -108,7 +108,7 @@
             'podcasts',
             'videos',
         ].map(async (endpointName) => {
-            const uri = `https://api.optout.news/api/${endpointName}.json`;
+            const uri = `https://pi.optout.news/api/${endpointName}.json`;
             const data = await fetch(uri).then((result) => result.json());
             return data;
         });
