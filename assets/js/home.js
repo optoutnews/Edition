@@ -1,6 +1,6 @@
 //Home page custom js
 
-if (document.URL === 'https://landing.dev.optout.news/') {
+if (document.URL === 'https://optout.news/') {
     (async function () {
         // Date formatting
     
