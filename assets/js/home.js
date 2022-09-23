@@ -127,7 +127,9 @@
     
         } catch (e) {
             console.log(e)
-            spinner.style.display = 'none';
+            if (spinner) {
+                spinner.style.display = 'none';
+            }
             document.querySelector(
                 '.slider'
             ).innerHTML = `<div class="errorMsgWrapper"><img class="error-img" src="https://optout-originals-images.nyc3.cdn.digitaloceanspaces.com/error_emoji.png" alt="Sad face"><p class="message">Looks like there was a problem getting the featured content. We're working hard on a fix-please be patient.</p></div>`;
