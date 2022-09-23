@@ -1,6 +1,5 @@
 //Home page custom js
 
-if (document.URL === 'https://optout.news/') {
     (async function () {
         // Date formatting
     
@@ -377,4 +376,3 @@ if (document.URL === 'https://optout.news/') {
             }
         }
     })();
-}
