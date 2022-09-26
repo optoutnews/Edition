@@ -1,8 +1,9 @@
 //Home page custom js
 
+if (document.URL === 'https://www.optout.news/') {
     (async function () {
         // Date formatting
-    
+
         const monthsArr = [
             'January',
             'February',
@@ -17,7 +18,7 @@
             'November',
             'December',
         ];
-    
+
         function formatAMPM(date) {
             var hours = date.getHours();
             var minutes = date.getMinutes();
@@ -28,7 +29,7 @@
             var strTime = hours + ':' + minutes + ' ' + ampm;
             return strTime;
         }
-    
+
         const toHHMMSS = (secondsInput, isCasual) => {
             const isNegative = secondsInput < 0;
             secondsInput = Math.abs(secondsInput);
@@ -57,7 +58,7 @@
             seconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
             return [hours, minutes, seconds].filter((item) => item).join(':');
         };
-    
+
         function formatDateTime({
             seconds: secondsInput,
             timestamp,
@@ -95,11 +96,11 @@
             }
             return convdataTime;
         }
-    
+
         // Data fetching
         let dataFetched = false,
             partners;
-    
+
         const spinner = document.querySelector('.spinner');
         try {
             const fetchPromises = [
@@ -118,13 +119,13 @@
                 ...fetchDataArrays[2],
                 ...fetchDataArrays[3],
             ];
-    
+
             dataFetched = true;
             partners = fetchDataArrays[0];
-    
+
             populateSlider(allContent);
             spinner.style.display = 'none';
-    
+
         } catch (e) {
             console.log(e)
             spinner.style.display = 'none';
@@ -133,13 +134,13 @@
             ).innerHTML = `<div class="errorMsgWrapper"><img class="error-img" src="https://optout-originals-images.nyc3.cdn.digitaloceanspaces.com/error_emoji.png" alt="Sad face"><p class="message">Looks like there was a problem getting the featured content. We're working hard on a fix-please be patient.</p></div>`;
             console.log(e);
         }
-    
+
         //Inject data
-    
+
         function populateSlider(data) {
             const featuredDiv = document.querySelector('.featured-content');
             const slider = document.querySelector('.slider');
-    
+
             if (!data) {
                 const noFeatured = document.createElement('h3');
                 noFeatured.innerHTML = 'Currently No Featured Items'
@@ -207,36 +208,36 @@
                             featuredDiv.append(jumpLinkContainer, slider);
                         }
                     });
-    
+
             }
         }
-    
+
         function getPartner(id) {
             const partner = partners.filter((partner) => {
                 return partner.id === id;
             });
             return partner[0].name;
         }
-    
+
         function getPartnerImage(id) {
             const partner = partners.filter((partner) => {
                 return partner.id === id;
             });
-    
+
             return removeWhiteSpaceFromImageUrl(partner[0].image_url);
         }
-    
+
         function removeWhiteSpaceFromImageUrl(url) {
             const regex = new RegExp(/ /g);
             const trimmedUrl = url ? url.replace(regex, '+') : url;
-    
+
             return trimmedUrl;
         }
-    
+
         //Guard against errors if data not fetched
         if (dataFetched) {
             //Slider code adapted and modified from: https://github.com/bushblade/Full-Screen-Touch-Slider
-    
+
             //Set global variables for this section
             const slider = document.querySelector('.slider');
             const jumpLinks = Array.from(document.querySelectorAll('.jump-link'));
@@ -247,11 +248,11 @@
                 prevTranslate,
                 animationID = 0,
                 currentIndex;
-    
+
             //Set first slide as active by default
             const defaultSlideIndex = '0';
             setActiveLink(defaultSlideIndex);
-    
+
             //Set event listeners on the jump-links//
             jumpLinks.forEach((anchor) => {
                 anchor.addEventListener('click', function (e) {
@@ -261,7 +262,7 @@
                     setActiveLink(currentIndex.toString());
                 });
             });
-    
+
             function setActiveLink(index) {
                 const activeLink = jumpLinks.filter(
                     (link) => link.getAttribute('id') === index
@@ -274,7 +275,7 @@
                     link.classList.remove('active-link');
                 });
             }
-    
+
             function getSlideWidth() {
                 const slide = document.querySelector('.slide');
                 const styles = window.getComputedStyle(slide);
@@ -285,7 +286,7 @@
                 );
                 return parseInt(slideWidth);
             }
-    
+
             // Make slides move on mouse drag and swipe
             slides.forEach((slide, index) => {
                 //Remove context menu for slides
@@ -294,14 +295,14 @@
                 slide.addEventListener('touchstart', touchStart(index));
                 slide.addEventListener('touchend', touchEnd);
                 slide.addEventListener('touchmove', touchMove);
-    
+
                 // Mouse events
                 slide.addEventListener('mousedown', touchStart(index));
                 slide.addEventListener('mouseup', touchEnd);
                 slide.addEventListener('mouseleave', touchEnd);
                 slide.addEventListener('mousemove', touchMove);
             });
-    
+
             function touchStart(index) {
                 return function (event) {
                     const html = document.querySelector('html');
@@ -315,23 +316,23 @@
                     });
                 };
             }
-    
+
             function touchEnd() {
                 const html = document.querySelector('html');
                 html.classList.remove('overflow-hidden');
                 isDragging = false;
                 cancelAnimationFrame(animationID);
-    
+
                 const movedBy = currentTranslate - prevTranslate;
-    
+
                 if (movedBy < -100 && currentIndex < slides.length - 1) {
                     currentIndex += 1;
                 }
-    
+
                 if (movedBy > 100 && currentIndex > 0) {
                     currentIndex -= 1;
                 }
-    
+
                 setPositionByIndex();
                 const currentIndexString = currentIndex
                     ? currentIndex.toString()
@@ -341,33 +342,33 @@
                     slide.classList.remove('grabbing');
                 });
             }
-    
+
             function touchMove(event) {
                 if (isDragging) {
                     const currentPosition = getPositionX(event);
                     currentTranslate = prevTranslate + currentPosition - startPos;
                 }
             }
-    
+
             function getPositionX(event) {
                 return event.type.includes('mouse')
                     ? event.pageX
                     : event.touches[0].clientX;
             }
-    
+
             function animation() {
                 setSlidesPosition();
                 if (isDragging) {
                     requestAnimationFrame(animation);
                 }
             }
-    
+
             function setSlidesPosition() {
                 slides.forEach((slide) => {
                     slide.style.transform = `translateX(${currentTranslate}px)`;
                 });
             }
-    
+
             function setPositionByIndex() {
                 const slideWidth = getSlideWidth();
                 currentTranslate = currentIndex * -slideWidth;
@@ -376,3 +377,5 @@
             }
         }
     })();
+
+}
