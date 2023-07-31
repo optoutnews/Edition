@@ -109,7 +109,7 @@ if (document.URL === 'https://www.optout.news/') {
                 'podcasts',
                 'videos',
             ].map(async (endpointName) => {
-                const uri = `https://api.optout.news/api/${endpointName}.json`;
+                const uri = `https://new-admin.optout.news/api/${endpointName}.json`;
                 const data = await fetch(uri).then((result) => result.json());
                 return data;
             });
